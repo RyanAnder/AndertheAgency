@@ -1,0 +1,508 @@
+$text-color: #3E3E3E;
+$text-white: #fcfcfc;
+$body-color: #FCFCFC;
+$background-color: #E0E0E0;
+$block-color: #FF6666;
+$block-color2: #41A291;
+$border-color: #554DB2;
+
+html {
+  height: 100%;
+  background-color: white;
+}
+
+body {
+  height: 680px;
+  background-color: $background-color;
+  margin: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  padding: 1em;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 2em);
+  font-family: "Playfair Display", serif;
+  max-width: calc(1400px - 4em);
+
+  a {
+    text-decoration: none;
+    color: $text-color;
+  }
+
+  a.logo {
+    font-weight: normal;
+    font-size: 1.5rem;
+    color: $text-color;
+  }
+
+  .bold-txt {
+    font-weight: bold;
+  }
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+    padding: 5px 0 0;
+    visibility: hidden;
+  }
+
+  li a {
+    padding: 0.5em;
+  }
+
+  .last-a {
+    padding-right: 0;
+  }
+}
+// Hero part
+
+.flexbox-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+// picture
+
+.flexbox-item-1 {
+  order: 2;
+  display: none;
+}
+// Name - Aleksander Kaaberma
+
+.flexbox-item-2 {
+  order: 3;
+  padding-top: 1em;
+}
+
+.flexbox-item-3 {
+  order: 1;
+}
+
+.flexbox-item-4 {
+  order: 4;
+}
+
+.flexbox-item-5 {
+  order: 5;
+}
+
+.introduction {
+  padding-top: 180px;
+
+  section {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 1.6em;
+    margin: 0;
+    max-width: 830px;
+  }
+
+  .pics {
+    padding-top: 1em;
+    height: 340px;
+  }
+
+  .profile {
+    width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .picBackground {
+    background-color: $text-color;
+    height: 360px;
+    width: 240px;
+    position: relative;
+    top: -360px;
+  }
+
+  .picStyle {
+    height: 360px;
+    width: 240px;
+    position: relative;
+    left: 25px;
+    top: 25px;
+    border: 13px solid $border-color;
+    box-sizing: border-box;
+  }
+
+  h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    text-align: center;
+    font-style: normal;
+    margin: auto;
+    color: $text-color;
+    margin-top: 10px;
+    font-family: "Playfair Display", serif;
+  }
+
+  h2 {
+    font-size: 1.7em;
+    font-weight: 300;
+    text-align: center;
+    align: center;
+    margin: 0 auto;
+    color: $text-color;
+    font-family: "Roboto", sans-serif;
+  }
+
+  p {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+    font-family: "Roboto",sans-serif;
+    font-weight: 300;
+    color: $text-color;
+    padding: 0;
+    display: none;
+  }
+}
+
+.buttonAlignment {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: $text-color;
+  padding: 10px 15px;
+  font-family: "Roboto",serif;
+  font-weight: 300;
+}
+
+.download-btn {
+  border: 1px solid $text-color;
+  box-sizing: border-box;
+  margin-left: 0;
+}
+
+.contact-btn {
+  background-color: $block-color;
+  margin-left: 10px;
+}
+// What I do area
+
+.largeWhat {
+  display: none;
+}
+
+.largeWork {
+  display: none;
+}
+
+h2 {
+  font-size: 2.3em;
+  font-weight: 700;
+  margin-top: 0;
+  margin-left: 16px;
+  margin-bottom: 10px;
+  color: $text-color;
+  font-family: "Playfair display", serif;
+}
+// Small gray text
+
+h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: #B2B2B2;
+  margin: 0 0 0 1em;
+}
+
+.glider-contain {
+  margin-top: 30px;
+}
+
+.whatBackground {
+  width: 265px;
+  margin: 1em;
+  padding: 0.5em;
+  background-color: $text-white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+// Portfolio
+
+.portfolio {
+  width: 250px;
+  height: 250px;
+  background-color: $text-color;
+  margin: 1em;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+hr {
+  border: 0.5px solid black;
+}
+
+.icon {
+  display: block;
+  margin-left: 15px;
+  height: 4.5em;
+  width: 4.5em;
+  grid-area: icon;
+  margin: 1em auto 1.3em;
+}
+
+h3 {
+  font-family: "Playfair display", serif;
+  font-weight: 600;
+  color: $text-color;
+  font-size: 1.6em;
+  margin-top: 0.7em;
+  margin-bottom: 0.5em;
+}
+
+p {
+  font-size: 1.2em;
+  color: $text-color;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+}
+
+.sectionCut {
+  margin-top: 5.7em;
+  width: 80%;
+  visibility: hidden;
+}
+// WORK SECTION
+
+.work {
+  margin-top: 80px;
+}
+// Contact me section
+
+.contactBackground {
+  margin: 1em;
+  background-color: white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.contactInner {
+  margin: 1em;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.h4Contact {
+  margin: 2em auto 0 0;
+}
+
+.shop-btn {
+  border: 1px solid $text-color;
+  box-sizing: border-box;
+  text-align: center;
+  width: 10em;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.contactP {
+  margin-top: 2.5em;
+}
+
+.inputText {
+  margin: 1em auto 0.2em 0;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+}
+
+::placeholder {
+  color: $text-color;
+}
+
+.input {
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid $text-color;
+  font-size: 1em;
+  font-weight: 700;
+  font-family: "Roboto", serif;
+  color: $text-color;
+}
+
+::placeholder {
+  color: $text-color;
+}
+
+.cta {
+  margin-top: 18px;
+  border: none;
+  background-color: $block-color;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  width: 10em;
+  margin-bottom: 2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: "Roboto", serif;
+}
+// What I do JavaScript tags
+.glider {
+  display: block;
+}
+
+.gliderLarge {
+  display: none;
+}
+#dots {
+  display: flex;
+}
+#dots2 {
+  display: none;
+}
+@media only screen and (min-width: 688px) {
+  html {
+    font-size: 19px;
+  }
+
+  body {
+    height: 885px;
+  }
+
+  .introduction {
+    p {
+      display: block;
+      max-width: 650px;
+      text-align: center;
+    }
+  }
+  // What I do JavaScript tags
+  .glider {
+    display: none;
+  }
+  .gliderLarge {
+    display: block;
+  }
+  #dots {
+    display: none;
+  }
+  #dots2 {
+    display: flex;
+  }
+}
+@media only screen and (min-width: 1090px) {
+  body {
+    height: 100%;
+    background-image: linear-gradient(216deg, rgba(77, 77, 77,0.05) 0%, rgba(77, 77, 77,0.05) 25%,rgba(42, 42, 42,0.05) 25%, rgba(42, 42, 42,0.05) 38%,rgba(223, 223, 223,0.05) 38%, rgba(223, 223, 223,0.05) 75%,rgba(36, 36, 36,0.05) 75%, rgba(36, 36, 36,0.05) 100%),linear-gradient(44deg, rgba(128, 128, 128,0.05) 0%, rgba(128, 128, 128,0.05) 34%,rgba(212, 212, 212,0.05) 34%, rgba(212, 212, 212,0.05) 57%,rgba(25, 25, 25,0.05) 57%, rgba(25, 25, 25,0.05) 89%,rgba(135, 135, 135,0.05) 89%, rgba(135, 135, 135,0.05) 100%),linear-gradient(241deg, rgba(55, 55, 55,0.05) 0%, rgba(55, 55, 55,0.05) 14%,rgba(209, 209, 209,0.05) 14%, rgba(209, 209, 209,0.05) 60%,rgba(245, 245, 245,0.05) 60%, rgba(245, 245, 245,0.05) 69%,rgba(164, 164, 164,0.05) 69%, rgba(164, 164, 164,0.05) 100%),linear-gradient(249deg, rgba(248, 248, 248,0.05) 0%, rgba(248, 248, 248,0.05) 32%,rgba(148, 148, 148,0.05) 32%, rgba(148, 148, 148,0.05) 35%,rgba(202, 202, 202,0.05) 35%, rgba(202, 202, 202,0.05) 51%,rgba(181, 181, 181,0.05) 51%, rgba(181, 181, 181,0.05) 100%),linear-gradient(92deg, hsl(214,0%,11%),hsl(214,0%,11%));
+    background-size: 25% auto;
+    background-repeat: repeat-y;
+    margin: 0;
+  }
+
+  header {
+    ul {
+      visibility: visible;
+    }
+  }
+  // Hero part
+  .flexbox-container {
+    display: grid;
+  }
+  // picture
+  .flexbox-item-1 {
+    grid-area: flexbox-item-1;
+    order: 1;
+    display: block;
+  }
+  // Name - Aleksander Kaaberma
+  .flexbox-item-2 {
+    order: 2;
+    padding: 0;
+  }
+
+  .flexbox-item-3 {
+    order: 3;
+  }
+
+  .flexbox-item-4 {
+    order: 4;
+  }
+
+  .flexbox-item-5 {
+    order: 5;
+  }
+
+  .introduction {
+    padding-top: 140px;
+    display: grid;
+    grid-template-columns: auto 55%;
+    grid-template-rows: auto;
+    grid-template-areas: "flexbox-item-1 flexbox-item-2" "flexbox-item-1 flexbox-item-3" "flexbox-item-1 flexbox-item-4" "flexbox-item-1 flexbox-item-5";
+    grid-column-gap: 3em;
+
+    section {
+      padding: 0;
+    }
+
+    .profile {
+      margin: auto 0 auto auto;
+      padding-top: 0;
+    }
+
+    h1 {
+      text-align: left;
+      color: $text-color;
+      margin: 0;
+    }
+
+    h2 {
+      text-align: left;
+      color: $text-color;
+    }
+
+    p {
+      display: block;
+      color: $text-color;
+      padding: 0;
+      margin: 0;
+    }
+
+    .buttonAlignment {
+      margin-left: 0;
+    }
+
+    .btn {
+      font-size: 1.2em;
+      text-decoration: none;
+      color: $text-color;
+      padding: 10px 15px;
+      font-family: "Roboto",serif;
+      font-weight: 300;
+    }
+
+    .download-btn {
+      border: 1px solid $text-color;
+    }
+
+    .contact-btn {
+      background-color: $block-color;
+      margin-left: 10px;
+    }
+  }
+
+  .glider-contain {
+    display: none;
+  }
+
+  .largeWhat {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  header {
+    left: 50%;
+    margin-left: calc(-700px + 2em);
+  }
+}
