@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Ander The agency</title>
-  <link rel="stylesheet" href="styles.min.css">
+  <link rel="stylesheet" href="styles/styles.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:100,300,400,700,900" rel="stylesheet">
   <link rel="stylesheet" href="Scripts/glide.core.min.css">
@@ -15,23 +15,91 @@
   <header>
     <a href="#" class="logo">Aleks<span class="bold-txt">ander</span></a>
     <nav>
-      <ul>
+      <ul class="large-ul">
         <li><a href="#">About</a></li>
         <li><a href="#">Shop</a></li>
         <li><a href="#">Portfolio</a></li>
         <li><a class="last-a" href="#">Passion Project</a></li>
       </ul>
+
+      <svg>
+        <defs>
+          <clipPath id="clipPath">
+            <circle class="one" cx="500" cy="500" r="591" transform="scale(0)" />
+            <!-- <circle class="two" cx="-1200" cy="1500" r="650" transform="scale(0)" /> -->
+          </clipPath>
+        </defs>
+      </svg>
+
     </nav>
+    <a class="brgrmenu" id="open" href="#">
+      <div class="brgr-back">
+        <div class="brgr-line brgr-line-1"></div>
+        <div class="brgr-line"></div>
+        <div class="brgr-line"></div>
+      </div>
+
+
+    </a>
+    <div class="wrapper">
+      <nav class="wrapper-nav" id="wrapper-nav">
+        <ul class="wrapper-elements" id="wrapper-elements">
+          <li><a><img id="close" src="Icons1/close.svg" alt="X"></a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a class="last-a" href="#">Passion Project</a></li>
+        </ul>
+        <h4>Handcrafted by Aleksander Kaaberma - 2020</h3>
+      </nav>
+
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script>
+      var tl = new TimelineMax({
+        paused: true
+      });
+      document.getElementById("open").addEventListener("click",() => {
+        this.tl.play();
+      })
+      document.getElementById("close").addEventListener("click",() => {
+        this.tl.reverse();
+      })
+
+
+      tl.from("#wrapper-nav", 0.85, {
+        x: 100,
+        display: 'none',
+        ease: Power4.easeOut,
+        delay: 0,
+      });
+
+      tl.to("circle.one", 0.7, {
+        scale: 1,
+        x: -150,
+        y: -40,
+        ease: Power2.easeOut,
+      }, "-=1");
+
+      tl.to("circle.two", 1, {
+        scale: 1,
+        x: 1200,
+        y: -2100,
+        ease: Power2.easeOut,
+      }, "-=3");
+    </script>
+
   </header>
 
   <!--- Intro ---->
+
   <div data-scroll class="introduction flexbox-container">
     <section class="profile flexbox-item-1">
       <div class="pics">
         <div class="picStyle">
         </div>
-        <div class="picBackground">
-        </div>
+<img class="picBackground" src="pictures/ander1.jpg" alt="Ander">
       </div>
     </section>
     <section class="main-info flexbox-item-2">
@@ -113,12 +181,24 @@
       </div>
     </div>
     <div id="dots1" class="glider-dots"></div>
+    <div class="glider2Large">
+      <div>
+        <img class="portfolio" src="Icons1/Webdev.svg" alt="">
+      </div>
+      <div>
+        <img class="portfolio" src="Icons1/Webdev.svg" alt="">
+      </div>
+      <div>
+        <img class="portfolio" src="Icons1/Webdev.svg" alt="">
+      </div>
+    </div>
+    <div id="dots1Large" class="glider-dots"></div>
   </div>
-  <!-- What I do --->
+  <!-- What I do  VERY LARGE--->
   <div class="largeWhat">
     <h4>SKILLS</h4>
     <h2>What I do</h2>
-    <div class="glider">
+    <div class="LargeWhatInner">
       <div class="whatBackground">
         <img class="icon" src="Icons1/marketing.svg" alt="marketing">
         <h3>Digital Marketing</h3>
@@ -144,36 +224,57 @@
   <div class="largeWork">
     <h4>SELECTED PROJECTS</h4>
     <h2>Case Studies</h2>
-    <div class="glider2">
-      <div>
+    <div class="largeWorkInner">
+      <div class="largeWorkInnerItems">
         <img class="portfolio" src="Icons1/Webdev.svg" alt="">
+        <div class="portfolioText">
+          <h3>Logoabi Website</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo aenean cursus dolor id netus amet vulputate a. Id odio consequat urna leo aliquam enim amet sed amet. Lorem nulla mauris feugiat sagittis vel in. Euismod dignissim lobortis
+            adipiscing sed.</p>
+          <a href="#" class="btn contact-btn">Read more</a>
+        </div>
       </div>
-      <div>
+      <div class="largeWorkInnerItems">
         <img class="portfolio" src="Icons1/Webdev.svg" alt="">
+        <div class="portfolioText">
+          <h3>CV kraam nt</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo aenean cursus dolor id netus amet vulputate a. Id odio consequat urna leo aliquam enim amet sed amet. Lorem nulla mauris feugiat sagittis vel in. Euismod dignissim lobortis
+            adipiscing sed.</p>
+          <a href="#" class="btn contact-btn">Read more</a>
+        </div>
       </div>
-      <div>
+      <div class="largeWorkInnerItems">
         <img class="portfolio" src="Icons1/Webdev.svg" alt="">
+        <div class="portfolioText">
+          <h3>Muu prügi</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo aenean cursus dolor id netus amet vulputate a. Id odio consequat urna leo aliquam enim amet sed amet. Lorem nulla mauris feugiat sagittis vel in. Euismod dignissim lobortis
+            adipiscing sed.</p>
+          <a href="#" class="btn contact-btn">Read more</a>
+        </div>
       </div>
     </div>
-    <div id="dots1" class="glider-dots"></div>
   </div>
 
   <!-- Contact me -->
   <div class="contactBackground">
     <div class="contactInner">
-      <h4 class="h4Contact">CONTACT ME</h4>
-      <h3>Send me a message or check out my CV and website templates.</h3>
-      <a href="#" class="btn shop-btn">Shop</a>
-      <p class="contactP">Got a project? Drop me a line if you want to work together on something exciting. Big or small.</p>
-      <h4 class="inputText">Name</h4>
-      <input class="input" type="text" name="Name" placeholder="What's your name?">
-      <h4 class="inputText">E-mail</h4>
-      <input class="input" type="text" name="Name" placeholder="What's your e-mail address?">
-      <h4 class="inputText">Service</h4>
-      <input class="input" type="text" name="Name" placeholder="What are you interested in?">
-      <h4 class="inputText">Your message</h4>
-      <input class="input" type="text" name="Name" placeholder="What's your message?">
-      <button class="cta" type="button" name="button">Send</button>
+      <div class="contactRight">
+        <h4 class="h4Contact">CONTACT ME</h4>
+        <h3 class="h3contact">Send me a message or check out my CV and website templates.</h3>
+        <a href="cvstore.html" class="btn shop-btn">Shop</a>
+      </div>
+      <div class="contactLeft">
+        <p class="contactP">Got a project? Drop me a line if you want to work together on something exciting. Big or small.</p>
+        <h4 class="inputText">Name</h4>
+        <input class="input" type="text" name="Name" placeholder="What's your name?">
+        <h4 class="inputText">E-mail</h4>
+        <input class="input" type="text" name="Name" placeholder="What's your e-mail address?">
+        <h4 class="inputText">Service</h4>
+        <input class="input" type="text" name="Name" placeholder="What are you interested in?">
+        <h4 class="inputText">Your message</h4>
+        <input class="input" type="text" name="Name" placeholder="What's your message?">
+        <button class="cta btn" type="button" name="button">Send</button>
+      </div>
     </div>
   </div>
 
@@ -193,7 +294,7 @@
       dots: "#dots2",
     })
   </script>
-
+  <!-- SMALL CASE STUDY JS -->
   <script>
     new Glider(document.querySelector('.glider2'), {
       slidesToShow: 1.3,
@@ -202,7 +303,20 @@
 
     })
   </script>
+  <!-- LARGE CASE STUDY JS -->
+  <script>
+    new Glider(document.querySelector('.glider2Large'), {
+      slidesToShow: 2.2,
+      draggable: true,
+      dots: "#dots1Large",
 
+    })
+  </script>
+  <div class="background">
+    <div class="backgroundcolor">
+
+    </div>
+  </div>
 </body>
 
 </html>
