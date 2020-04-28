@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Ander The agency</title>
+  <link rel="stylesheet" href="styles/styles.min.css">
+  <link rel="stylesheet" href="styles/case-study.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:100,300,400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="Scripts/glide.core.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <a href="#" class="logo">Aleks<span class="bold-txt">ander</span></a>
+    <nav>
+      <ul class="large-ul">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a class="last-a" href="#">Passion Project</a></li>
+      </ul>
+
+      <svg>
+        <defs>
+          <clipPath id="clipPath">
+            <circle class="one" cx="500" cy="500" r="591" transform="scale(0)" />
+            <!-- <circle class="two" cx="-1200" cy="1500" r="650" transform="scale(0)" /> -->
+          </clipPath>
+        </defs>
+      </svg>
+
+    </nav>
+    <a class="brgrmenu" id="open" href="#">
+      <div class="brgr-back">
+        <div class="brgr-line brgr-line-1"></div>
+        <div class="brgr-line"></div>
+        <div class="brgr-line"></div>
+      </div>
+
+
+    </a>
+    <div class="wrapper">
+      <nav class="wrapper-nav" id="wrapper-nav">
+        <ul class="wrapper-elements" id="wrapper-elements">
+          <li><a><img id="close" src="Icons1/close.svg" alt="X"></a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a class="last-a" href="#">Passion Project</a></li>
+        </ul>
+        <h4>Handcrafted by Aleksander Kaaberma - 2020</h3>
+      </nav>
+
+
+    </div>
+    <script src="Scripts/TweenMax.min.js"></script>
+    <script>
+      var tl = new TimelineMax({
+        paused: true
+      });
+      document.getElementById("open").addEventListener("click", () => {
+        this.tl.play();
+      })
+      document.getElementById("close").addEventListener("click", () => {
+        this.tl.reverse();
+      })
+
+
+      tl.from("#wrapper-nav", 1, {
+        x: 100,
+        display: 'none',
+        ease: Power4.easeOut,
+        delay: 0,
+      });
+
+      tl.to("circle.one", 0.7, {
+        scale: 1,
+        x: -150,
+        y: -40,
+        ease: Power2.easeOut,
+      }, "-=1");
+
+      tl.to("circle.two", 1, {
+        scale: 1,
+        x: 1200,
+        y: -2100,
+        ease: Power2.easeOut,
+      }, "-=3");
+    </script>
+
+  </header>
+    <body>
+
+  <div class="contactBackground">
+    <div class="contactInner">
+      <h4>Case Study:</h4>
+      <h1>Logoabi kodulehe disain ja arendus</h1>
+      <hr>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo aenean cursus dolor id netus amet vulputate a. Id odio consequat urna leo aliquam enim amet sed amet. Lorem nulla mauris feugiat sagittis vel in. Euismod dignissim lobortis
+        adipiscing sed.</p>
+      <div class="paragraph-1">
+        <div class="img-1">
+
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo aenean cursus dolor id netus amet vulputate a. Id odio consequat urna leo aliquam enim amet sed amet. Lorem nulla mauris feugiat sagittis vel in. Euismod dignissim lobortis
+          adipiscing sed.</p>
+        <a href="http://logoabi.com/tooted/fotokingitused" class="btn contact-btn">Visit page</a>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo aenean cursus dolor id netus amet vulputate a. Id odio consequat urna leo aliquam enim amet sed amet. Lorem nulla mauris feugiat sagittis vel in. Euismod dignissim lobortis
+        adipiscing sed.</p>
+      <div class="paragraph-1">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo aenean cursus dolor id netus amet vulputate a. Id odio consequat urna leo aliquam enim amet sed amet. Lorem nulla mauris feugiat sagittis vel in. Euismod dignissim lobortis
+          adipiscing sed.</p>
+        <div class="img-1">
+        </div>
+      </div>
+      <hr class="cta-hr">
+      <h1 class="h1-cta">Interested in working together?</h1>
+      <a href="http://logoabi.com/tooted/fotokingitused" class="btn contact-btn h1-cta-btn">Contact me</a>
+
+    </div>
+  </div>
+  <div class="background">
+    <div class="backgroundcolor">
+
+    </div>
+  </div>
+</body>
+
+</html>
