@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>CV to buy</title>
-  <link rel="stylesheet" href="styles.min.css">
-  <link rel="stylesheet" href="cvstyles.min.css">
+  <link rel="stylesheet" href="styles/styles.min.css">
+  <link rel="stylesheet" href="styles/cvstyles.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:100,300,400,700,900" rel="stylesheet">
   <link rel="stylesheet" href="Scripts/glide.core.min.css">
@@ -14,24 +14,35 @@
 
 <body>
   <header>
-    <a href="#" class="logo">Aleks<span class="bold-txt">ander</span></a>
+    <a href="index.html" class="logo">Aleks<span class="bold-txt">ander</span></a>
     <nav>
-      <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a class="last-a" href="#">Passion Project</a></li>
+      <ul class="large-ul">
+        <li class="nav">
+          <div class="hoverline">
+          </div><a href="about.html">About</a>
+        </li>
+        <li class="nav">
+          <div class="hoverline">
+          </div><a href="cvstore.html">Shop</a>
+        </li>
+        <li class="nav">
+          <div class="hoverline">
+          </div><a href="portfolio.html">Portfolio</a>
+        </li>
+        <li class="nav">
+          <div class="hoverline">
+          </div><a class="last-a" href="#">Passion Project</a>
+        </li>
       </ul>
-    </nav>
 
-    <svg>
-      <defs>
-        <clipPath id="clipPath">
-          <circle class="one" cx="500" cy="500" r="591" transform="scale(0)" />
-          <!-- <circle class="two" cx="-1200" cy="1500" r="650" transform="scale(0)" /> -->
-        </clipPath>
-      </defs>
-    </svg>
+      <svg>
+        <defs>
+          <clipPath id="clipPath">
+            <circle class="one" cx="500" cy="500" r="591" transform="scale(0)" />
+            <!-- <circle class="two" cx="-1200" cy="1500" r="650" transform="scale(0)" /> -->
+          </clipPath>
+        </defs>
+      </svg>
 
     </nav>
     <a class="brgrmenu" id="open" href="#">
@@ -47,9 +58,10 @@
       <nav class="wrapper-nav" id="wrapper-nav">
         <ul class="wrapper-elements" id="wrapper-elements">
           <li><a><img id="close" src="Icons1/close.svg" alt="X"></a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Shop</a></li>
-          <li><a href="#">Portfolio</a></li>
+          <li class="nav"><a href="about.html">About</a>
+          </li>
+          <li><a href="cvstore.html">Shop</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
           <li><a class="last-a" href="#">Passion Project</a></li>
         </ul>
         <h4>Handcrafted by Aleksander Kaaberma - 2020</h3>
@@ -57,40 +69,39 @@
 
 
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="Scripts/TweenMax.min.js"></script>
     <script>
       var tl = new TimelineMax({
         paused: true
       });
+
+
+        tl.from("#wrapper-nav", 1, {
+          x: 100,
+          display: 'none',
+          ease: Power4.easeOut,
+          delay: 0,
+        });
+
+        tl.to("circle.one", 0.7, {
+          scale: 1,
+          x: -150,
+          y: -40,
+          ease: Power2.easeOut,
+        }, "-=1");
+
+
+
+
       document.getElementById("open").addEventListener("click", () => {
-        this.tl.play();
-      })
-      document.getElementById("close").addEventListener("click", () => {
-        this.tl.reverse();
-      })
-
-
-      tl.from("#wrapper-nav", 1, {
-        x: 100,
-        display: 'none',
-        ease: Power4.easeOut,
-        delay: 0,
+        tl.play();
       });
 
-      tl.to("circle.one", 0.7, {
-        scale: 1,
-        x: -150,
-        y: -40,
-        ease: Power2.easeOut,
-      }, "-=1");
-
-      tl.to("circle.two", 1, {
-        scale: 1,
-        x: 1200,
-        y: -2100,
-        ease: Power2.easeOut,
-      }, "-=3");
+      document.getElementById("close").addEventListener("click", () => {
+        tl.reverse();
+      });
     </script>
+
   </header>
   <!--- Intro ---->
   <div data-scroll class="introduction flexbox-container">
@@ -266,9 +277,62 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor duis vehicula habitasse in facilisi varius neque tortor nec.</p>
         </div>
       </div>
-      <p class="contact-me">For more questions click: <a class="contact-link"> contact me</a></p>
+      <p class="faq-contact">For more questions click: <a class="contact-link" id="contact-btn"> contact me</a></p>
     </div>
   </div>
+  <div class="contact-me" id="contact-me">
+
+    <div class="contactBackground">
+      <div class="contact-hover-Inner">
+        <div class="contact-a">
+          <a><img class"contact-me-x" id="contact-me-x" src="Icons1/close.svg" alt="X"></a>
+        </div>
+        <div class="contact-inner-Right">
+          <h4 class="h4Contact">CONTACT ME</h4>
+          <h3 class="h3contact">Send me a message or check out my CV and website templates.</h3>
+          <a href="cvstore.html" class="btn shop-btn">Shop</a>
+        </div>
+        <div class="contact-inner-Left">
+          <p class="contactP">Got a project? Drop me a line if you want to work together on something exciting. Big or small.</p>
+          <h4 class="inputText">Name</h4>
+          <input class="input" type="text" name="Name" placeholder="What's your name?">
+          <h4 class="inputText">E-mail</h4>
+          <input class="input" type="text" name="Name" placeholder="What's your e-mail address?">
+          <h4 class="inputText">Service</h4>
+          <select class="input" name="Name">
+            <option value selected disabled>What are you interested in?</option>
+            <option value="UX desing">UX design</option>
+            <option value="UX desing">Webdev</option>
+            <option value="UX desing">Just chat</option>
+          </select>
+          <h4 class="inputText">Your message</h4>
+          <input class="input" type="text" name="Name" placeholder="What's your message?">
+          <button class="cta btn" type="button" name="button">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="Scripts/TweenMax.min.js"></script>
+  <script>
+    var timeline = new TimelineMax({
+      paused: true
+    });
+    document.getElementById("contact-btn").addEventListener("click", () => {
+      this.timeline.play();
+    })
+    document.getElementById("contact-me-x").addEventListener("click", () => {
+      this.timeline.reverse();
+    })
+
+
+    timeline.from("#contact-me", 1, {
+      y: 100,
+      display: 'none',
+      ease: Power4.easeOut,
+      delay: 0,
+    });
+
+    </script>
   <div class="background">
     <div class="backgroundcolor">
 

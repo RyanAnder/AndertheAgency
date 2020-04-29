@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Ander The agency</title>
-  <link rel="stylesheet" href="styles.min.css">
+  <link rel="stylesheet" href="styles/styles.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:100,300,400,700,900" rel="stylesheet">
   <link rel="stylesheet" href="Scripts/glide.core.min.css">
@@ -13,12 +13,12 @@
 
 <body>
   <header>
-    <a href="#" class="logo">Aleks<span class="bold-txt">ander</span></a>
+    <a href="index.html" class="logo">Aleks<span class="bold-txt">ander</span></a>
     <nav>
       <ul class="large-ul">
         <li class="nav">
           <div class="hoverline">
-          </div><a href="#">About</a>
+          </div><a href="about.html">About</a>
         </li>
         <li class="nav">
           <div class="hoverline">
@@ -57,9 +57,7 @@
       <nav class="wrapper-nav" id="wrapper-nav">
         <ul class="wrapper-elements" id="wrapper-elements">
           <li><a><img id="close" src="Icons1/close.svg" alt="X"></a></li>
-          <li class="nav">
-            <div class="hoverline">
-            </div><a href="#">About</a>
+          <li class="nav"><a href="about.html">About</a>
           </li>
           <li><a href="cvstore.html">Shop</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
@@ -75,34 +73,32 @@
       var tl = new TimelineMax({
         paused: true
       });
+
+
+        tl.from("#wrapper-nav", 1, {
+          x: 100,
+          display: 'none',
+          ease: Power4.easeOut,
+          delay: 0,
+        });
+
+        tl.to("circle.one", 0.7, {
+          scale: 1,
+          x: -150,
+          y: -40,
+          ease: Power2.easeOut,
+        }, "-=1");
+
+
+
+
       document.getElementById("open").addEventListener("click", () => {
-        this.tl.play();
-      })
-      document.getElementById("close").addEventListener("click", () => {
-        this.tl.reverse();
-      })
-
-
-      tl.from("#wrapper-nav", 1, {
-        x: 100,
-        display: 'none',
-        ease: Power4.easeOut,
-        delay: 0,
+        tl.play();
       });
 
-      tl.to("circle.one", 0.7, {
-        scale: 1,
-        x: -150,
-        y: -40,
-        ease: Power2.easeOut,
-      }, "-=1");
-
-      tl.to("circle.two", 1, {
-        scale: 1,
-        x: 1200,
-        y: -2100,
-        ease: Power2.easeOut,
-      }, "-=3");
+      document.getElementById("close").addEventListener("click", () => {
+        tl.reverse();
+      });
     </script>
 
   </header>
@@ -127,7 +123,7 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien aenean aliquam blandit tincidunt sed cursus eleifend. Nibh id duis facilisis tincidunt pretium. Mauris, quis faucibus varius iaculis amet.</p>
     </div>
     <div class="buttonAlignment flexbox-item-5">
-      <a href="#" class="btn download-btn">Portfolio</a>
+      <a href="portfolio.html" class="btn download-btn">Portfolio</a>
       <a href="#" class="btn contact-btn" id="contact-btn">Contact Me</a>
     </div>
   </div>
@@ -158,30 +154,6 @@
     </div>
     <div id="dots" class="glider-dots"></div>
   </div>
-  <!-- Glider Large -->
-  <!-- <div class="gliderLarge">
-      <div class="whatBackground">
-        <img class="icon" src="Icons1/marketing.svg" alt="marketing">
-        <h3>Digital Marketing</h3>
-        <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor duis vehicula habitasse in facilisi varius neque tortor nec.</p>
-      </div>
-      <div class="whatBackground">
-        <img class="icon" src="Icons1/UX design.svg" alt="ux">
-        <h3>UX design</h3>
-        <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor duis vehicula habitasse in facilisi varius neque tortor nec.</p>
-      </div>
-      <div class="whatBackground">
-        <img class="icon" src="Icons1/Webdev.svg" alt="webdev">
-        <h3>Web development</h3>
-        <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor duis vehicula habitasse in facilisi varius neque tortor nec.</p>
-      </div>
-    </div>
-    <div id="dots2" class="glider-dots"></div>
-  </div> -->
-  <!-- MY work -->
   <div class="glider-contain multiple work">
     <h4>SELECTED PROJECTS</h4>
     <h2>Case Studies</h2>
@@ -197,18 +169,7 @@
       </div>
     </div>
     <div id="dots1" class="glider-dots"></div>
-    <!-- <div class="glider2Large">
-      <div>
-        <img class="portfolio" src="Icons1/Webdev.svg" alt="">
-      </div>
-      <div>
-        <img class="portfolio" src="Icons1/Webdev.svg" alt="">
-      </div>
-      <div>
-        <img class="portfolio" src="Icons1/Webdev.svg" alt="">
-      </div>
-    </div>
-    <div id="dots1Large" class="glider-dots"></div> -->
+
   </div>
   <!-- What I do  VERY LARGE--->
   <div class="largeWhat">
@@ -334,7 +295,7 @@
     })
   </script>
 
-  <!-- <div class="contact-me" id="contact-me">
+  <div class="contact-me" id="contact-me">
 
     <div class="contactBackground">
       <div class="contact-hover-Inner">
@@ -353,7 +314,12 @@
           <h4 class="inputText">E-mail</h4>
           <input class="input" type="text" name="Name" placeholder="What's your e-mail address?">
           <h4 class="inputText">Service</h4>
-          <input class="input" type="text" name="Name" placeholder="What are you interested in?">
+          <select class="input" name="Name">
+            <option value selected disabled>What are you interested in?</option>
+            <option value="UX desing">UX design</option>
+            <option value="UX desing">Webdev</option>
+            <option value="UX desing">Just chat</option>
+          </select>
           <h4 class="inputText">Your message</h4>
           <input class="input" type="text" name="Name" placeholder="What's your message?">
           <button class="cta btn" type="button" name="button">Send</button>
@@ -363,25 +329,25 @@
   </div>
   <script src="Scripts/TweenMax.min.js"></script>
   <script>
-    var tl = new TimelineMax({
+    var timeline = new TimelineMax({
       paused: true
     });
     document.getElementById("contact-btn").addEventListener("click", () => {
-      this.tl.play();
+      this.timeline.play();
     })
     document.getElementById("contact-me-x").addEventListener("click", () => {
-      this.tl.reverse();
+      this.timeline.reverse();
     })
 
 
-    tl.from("#contact-me", 1, {
+    timeline.from("#contact-me", 1, {
       y: 100,
       display: 'none',
       ease: Power4.easeOut,
       delay: 0,
     });
 
-    </script> -->
+    </script>
   <div class="background">
     <div class="backgroundcolor">
 
