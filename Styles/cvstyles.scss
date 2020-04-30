@@ -15,9 +15,9 @@ $border-color: #41A291;
 }
 
 .introduction {
-  grid-template-columns: 33% auto;
+  grid-template-columns: 56% auto;
   grid-column-gap: 15px;
-  grid-template-rows: 0 111px 115px 21px;
+  grid-template-rows: 0 150px 115px 21px;
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
@@ -112,13 +112,23 @@ h2 {
       box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
     }
 
+    .CV-examples:hover .cv-img {
+      width: 290px;
+      height: 407px;
+      margin: 9px;
+      box-shadow: 4px 6px 5px rgba(0, 0, 0, 0.25);
+      transition: width 100ms ease-out;
+      transition: height 110ms ease-out;
+    }
+
     .cv-hover {
-      opacity: 0;
+      // opacity: 0;
+      display: flex;
       position: absolute;
-      width: 283px;
-      height: 400px;
-      background-color: rgba(0,0,0 , 0.5);
-      margin: 13px;
+      width: 290px;
+      height: 407px;
+      background-color: none;
+      margin: 9px;
       transition: opacity 0.5s ease-out;
       -moz-transition: opacity 0.5s ease-out;
       -webkit-transition: opacity 0.5s ease-out;
@@ -127,10 +137,10 @@ h2 {
 
     .cv-hover-btn {
       display: none;
-      position: absolute;
-      margin-left: 50%;
-      left: -53px;
-      bottom: 5px;
+      align-self: flex-end;
+      text-align: center;
+      margin-left: 0;
+      flex-grow: 3;
       transition: opacity 0.5s ease-out;
     }
 
@@ -138,6 +148,7 @@ h2 {
       .cv-hover-btn {
         display: block;
       }
+
       .cv-hover {
         opacity: 1;
       }
@@ -158,6 +169,10 @@ h2 {
     padding-top: 1em;
     text-align: center;
   }
+}
+
+.faqbackground {
+  height: 27%;
 }
 
 .faq-item {
@@ -203,10 +218,10 @@ h2 {
   max-height: 20rem;
 }
 
-.contact-me {
+.faq-contact {
   opacity: 0.7;
   padding: 7px 0;
-  margin-top:0.5em;
+  margin-top: 0.5em;
 }
 
 .contact-link {
@@ -235,10 +250,16 @@ h2 {
       width: 400px;
     }
   }
+
+  .faqbackground {
+    height: 19%;
+  }
 }
-@media only screen and (min-width: 1090px) {
+@media only screen and (min-width: 1000px) {
   .introduction {
     padding-top: 194px;
+    grid-template-columns: 45% auto;
+    grid-template-rows: 0 111px 115px 21px;
 
     h1 {
       font-size: 3.5em;
@@ -254,6 +275,11 @@ h2 {
       text-align: center;
       font-size: 2.3em;
     }
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .introduction {
+    grid-template-columns: 33% auto;
   }
 }
 // H2 ALIGN END

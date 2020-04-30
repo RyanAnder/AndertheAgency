@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Ander The agency</title>
-  <link rel="stylesheet" href="styles.min.css">
+  <link rel="stylesheet" href="styles/styles.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:100,300,400,700,900" rel="stylesheet">
   <link rel="stylesheet" href="Scripts/glide.core.min.css">
@@ -12,7 +12,11 @@
 </head>
 
 <body>
+  <div class="header-background">
+
+  </div>
   <header>
+
     <a href="index.html" class="logo">Aleks<span class="bold-txt">ander</span></a>
     <nav>
       <ul class="large-ul">
@@ -75,19 +79,19 @@
       });
 
 
-        tl.from("#wrapper-nav", 1, {
-          x: 100,
-          display: 'none',
-          ease: Power4.easeOut,
-          delay: 0,
-        });
+      tl.from("#wrapper-nav", 1, {
+        x: 100,
+        display: 'none',
+        ease: Power4.easeOut,
+        delay: 0,
+      });
 
-        tl.to("circle.one", 0.7, {
-          scale: 1,
-          x: -150,
-          y: -40,
-          ease: Power2.easeOut,
-        }, "-=1");
+      tl.to("circle.one", 0.7, {
+        scale: 1,
+        x: -150,
+        y: -40,
+        ease: Power2.easeOut,
+      }, "-=1");
 
 
 
@@ -130,8 +134,10 @@
   <hr class="sectionCut">
   <!-- What I do Scroll - Kui moblas -->
   <div class="glider-contain multiple">
-    <h4>SKILLS</h4>
-    <h2>What I do</h2>
+    <div class="section-headers">
+      <h4>SKILLS</h4>
+      <h2>What I do</h2>
+    </div>
     <div class="glider">
       <div class="whatBackground">
         <img class="icon" src="Icons1/marketing.svg" alt="marketing">
@@ -155,8 +161,10 @@
     <div id="dots" class="glider-dots"></div>
   </div>
   <div class="glider-contain multiple work">
-    <h4>SELECTED PROJECTS</h4>
-    <h2>Case Studies</h2>
+    <div class="section-headers">
+      <h4>SELECTED PROJECTS</h4>
+      <h2>Case Studies</h2>
+    </div>
     <div class="glider2">
       <div>
         <img class="portfolio" src="Icons1/Webdev.svg" alt="">
@@ -168,7 +176,6 @@
         <img class="portfolio" src="Icons1/Webdev.svg" alt="">
       </div>
     </div>
-    <div id="dots1" class="glider-dots"></div>
 
   </div>
   <!-- What I do  VERY LARGE--->
@@ -256,23 +263,44 @@
         <a href="cvstore.html" class="btn shop-btn">Shop</a>
       </div>
       <div class="contactLeft">
-        <p class="contactP">Got a project? Drop me a line if you want to work together on something exciting. Big or small.</p>
-        <h4 class="inputText">Name</h4>
-        <input class="input" type="text" name="Name" placeholder="What's your name?">
-        <h4 class="inputText">E-mail</h4>
-        <input class="input" type="text" name="Name" placeholder="What's your e-mail address?">
-        <h4 class="inputText">Service</h4>
-        <select class="input" name="Name">
-          <option value selected disabled>What are you interested in?</option>
-          <option value="UX desing">UX design</option>
-          <option value="UX desing">Webdev</option>
-          <option value="UX desing">Just chat</option>
-        </select>
-        <h4 class="inputText">Your message</h4>
-        <input class="input" type="text" name="Name" placeholder="What's your message?">
-        <button class="cta btn" type="button" name="button">Send</button>
+        <form class="" id="contact-form" action="contact-me.php" method="post">
+          <p class="contactP">Got a project? Drop me a line if you want to work together on something exciting. Big or small.</p>
+          <h4 class="inputText">Name</h4>
+          <input class="input" type="text" name="name" placeholder="What's your name?">
+          <h4 class="inputText">E-mail</h4>
+          <input class="input" type="text" name="email" placeholder="What's your e-mail address?">
+          <h4 class="inputText">Service</h4>
+          <select class="input" name="service">
+            <option value selected disabled>What are you interested in?</option>
+            <option value="UX desing">UX design</option>
+            <option value="UX desing">Webdev</option>
+            <option value="UX desing">Just chat</option>
+          </select>
+          <h4 class="inputText">Your message</h4>
+          <textarea class="input" type="text" name="message" placeholder="What's your message?"></textarea>
+          <button class="cta btn" type="button" name="button">Send</button>
+        </form>
       </div>
     </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <hr class="cta-hr">
+    <h1 class="h1-cta">Interested in working together?</h1>
+    <a href="#" class="btn contact-btn h1-cta-btn" id="contact-btn">Contact me</a>
+    <div class="footer-icons">
+      <a href="https://www.linkedin.com/in/kaaberma/">
+        <img class="social-icon" src="Icons/LinkedIn-01.svg" alt="LinkedIn">
+      </a>
+      <a href="https://www.facebook.com/Kaaberma">
+        <img class="social-icon" src="Icons/FacebookSVG-02.svg" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/kaaberma/">
+        <img class="social-icon" src="Icons/Instagram SVG-03.svg" alt="Instagram">
+      </a>
+    </div>
+    <p>© Handcrafted by Aleksander Kaaberma - 2020</p>
   </div>
 
   <script src="Scripts/glide.min.js"></script>
@@ -282,16 +310,6 @@
       slidesToShow: 1.3,
       draggable: true,
       dots: "#dots",
-    })
-  </script>
-
-  <!-- SMALL CASE STUDY JS -->
-  <script>
-    new Glider(document.querySelector('.glider2'), {
-      slidesToShow: 1.3,
-      draggable: true,
-      dots: "#dots1",
-
     })
   </script>
 
@@ -346,8 +364,7 @@
       ease: Power4.easeOut,
       delay: 0,
     });
-
-    </script>
+  </script>
   <div class="background">
     <div class="backgroundcolor">
 

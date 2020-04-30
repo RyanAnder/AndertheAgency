@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>CV to buy</title>
+  <link rel="stylesheet" href="styles/styles.min.css">
+  <link rel="stylesheet" href="styles/about.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:100,300,400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="Scripts/glide.core.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="logo">Aleks<span class="bold-txt">ander</span></a>
+    <nav>
+      <ul class="large-ul">
+        <li class="nav">
+          <div class="hoverline">
+          </div><a href="about.html">About</a>
+        </li>
+        <li class="nav">
+          <div class="hoverline">
+          </div><a href="cvstore.html">Shop</a>
+        </li>
+        <li class="nav">
+          <div class="hoverline">
+          </div><a href="portfolio.html">Portfolio</a>
+        </li>
+        <li class="nav">
+          <div class="hoverline">
+          </div><a class="last-a" href="#">Passion Project</a>
+        </li>
+      </ul>
+
+      <svg>
+        <defs>
+          <clipPath id="clipPath">
+            <circle class="one" cx="500" cy="500" r="591" transform="scale(0)" />
+            <!-- <circle class="two" cx="-1200" cy="1500" r="650" transform="scale(0)" /> -->
+          </clipPath>
+        </defs>
+      </svg>
+
+    </nav>
+    <a class="brgrmenu" id="open" href="#">
+      <div class="brgr-back">
+        <div class="brgr-line brgr-line-1"></div>
+        <div class="brgr-line"></div>
+        <div class="brgr-line"></div>
+      </div>
+
+
+    </a>
+    <div class="wrapper">
+      <nav class="wrapper-nav" id="wrapper-nav">
+        <ul class="wrapper-elements" id="wrapper-elements">
+          <li><a><img id="close" src="Icons1/close.svg" alt="X"></a></li>
+          <li class="nav"><a href="about.html">About</a>
+          </li>
+          <li><a href="cvstore.html">Shop</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a class="last-a" href="#">Passion Project</a></li>
+        </ul>
+        <h4>Handcrafted by Aleksander Kaaberma - 2020</h3>
+      </nav>
+
+
+    </div>
+    <script src="Scripts/TweenMax.min.js"></script>
+    <script>
+      var tl = new TimelineMax({
+        paused: true
+      });
+
+
+      tl.from("#wrapper-nav", 1, {
+        x: 100,
+        display: 'none',
+        ease: Power4.easeOut,
+        delay: 0,
+      });
+
+      tl.to("circle.one", 0.7, {
+        scale: 1,
+        x: -150,
+        y: -40,
+        ease: Power2.easeOut,
+      }, "-=1");
+
+
+
+
+      document.getElementById("open").addEventListener("click", () => {
+        tl.play();
+      });
+
+      document.getElementById("close").addEventListener("click", () => {
+        tl.reverse();
+      });
+    </script>
+
+  </header>
+  <div class="introduction">
+    <div class="about-me-pictures">
+      <div class="pics about-pics">
+        <div class="picStyle">
+        </div>
+        <img class="picBackground" src="pictures/ander1.jpg" alt="Ander">
+      </div>
+    </div>
+
+  </div>
+  <div class="about-outer">
+    <div class="about-blank"></div>
+    <div class="about-inner">
+      <div class="intro-about">
+        <h4>A FEW WORDS ABOUT ME</h4>
+        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl arcu venenatis.</h1>
+        <p class="intro-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna amet, aliquam dictum viverra diam amet.</p>
+      </div>
+      <div class="h4-padding services-about">
+        <h4>SERVICES</h4>
+        <hr>
+        <h2>Digital Marketing / UX design / Web development / Facebook ads / Google analytics</h2>
+      </div>
+      <div class="h4-padding tools-about">
+        <h4>TOOLS I USE</h4>
+        <hr>
+        <h2>Illustrator / HTML / CSS / JavaScript / Photoshop / Figma / Premiere Pro / Lightroom</h2>
+      </div>
+      <div class="h4-padding work-about">
+                  <h4 >WORK EXPERIENCE</h4>
+        <hr >
+        <div class="job-one">
+
+          <div class="job-title">
+            <h2>Marketing & Community Manager</h2>
+            <p>OCT 2018 - JAN 2019</p>
+          </div>
+          <h3>U24 Solutions / Tallinn / Estonia</h3>
+          <p>- Töötasin välja Cradle of Sinsi brändi ja disainikeele.<br>
+            - Vastutasin Cradle of Sinsi veebidisaini ja sotsiaalmeedia sisuhaldamise
+            eest, kasutades disainimiseks Adobe Photoshop, Illustrator ja Premiere
+            programme.<br>
+            - Facebook’i ja Reddit’i digiturundus jälgijaskonna ja awareness’i kasvatamiseks
+            ning lead’ide ehitamiseks.<br>
+            - Arendasin välja kanalid, läbi mille uusi kliente sisse tuua.
+            - Pressiteadete kirjutamine ja publitseerimine.<br>
+            - Arendasin suhteid turu influencer’ite ja meediaga.<br>
+            - Ehitasin üles Instagram’i ja Facebook’i kasutajad vastavalt 3500 ja 480
+            jälgijani.<br>
+            - Ehitasin üles ja haldasin 750-liikmelist privaatset Discord gruppi.<br>
+            - Nõustasin arendajaid UI disaini osas, kuidas saaks parendada kasutaja
+            teekonda ja kasutajasõbralikkust.<br>
+            - Copy tootmine sotsiaalmeedia, kodulehe, Steam’i ja e-mail turunduse
+            jaoks.</p>
+        </div>
+      </div>
+      <hr class="hr-work">
+      <div class="job-two">
+        <div class="job-title">
+          <h2>Project Manager Internship</h2>
+          <p>JUNE 2018 - SEPT 2018</p>
+        </div>
+        <h3>Tabasco The Agency / Tallinn / Estonia</h3>
+<p>- Kampaaniate projektijuhtimine, eelarvestamine, lepingud.<br>
+- Klientide sotsiaalmeedia sisuhaldamine.<br>
+- Töötasin välja Tabasco puhkuste arvestamise süsteemi.<br>
+- Abistasin müügiesitluste ja lepingupõhjadega.</p>
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+
+
+
+  <!-- Footer -->
+  <div class="footer">
+    <hr class="cta-hr">
+    <h1 class="h1-cta">Interested in working together?</h1>
+    <a href="#" class="btn contact-btn h1-cta-btn" id="contact-btn">Contact me</a>
+    <div class="footer-icons">
+      <a href="https://www.linkedin.com/in/kaaberma/">
+        <img class="social-icon" src="Icons/LinkedIn-01.svg" alt="LinkedIn">
+      </a>
+      <a href="https://www.facebook.com/Kaaberma">
+        <img class="social-icon" src="Icons/FacebookSVG-02.svg" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/kaaberma/">
+        <img class="social-icon" src="Icons/Instagram SVG-03.svg" alt="Instagram">
+      </a>
+    </div>
+    <p>© Handcrafted by Aleksander Kaaberma - 2020</p>
+  </div>
+  <div class="background">
+    <div class="backgroundcolor">
+
+    </div>
+
+</body>
+
+</html>
